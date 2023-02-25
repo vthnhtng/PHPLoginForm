@@ -8,10 +8,11 @@ class LoginModel
             $username = $_POST['username'];
             $password = $_POST['password'];
             try {
-                $mysql_server_name = "localhost";
-                $mysql_username = "root";
-                $mysql_password = "vthnhtng@0511";
-                $database_name = "myapp";
+                //enter your mysql information
+                $mysql_server_name = "";
+                $mysql_username = "";
+                $mysql_password = "";
+                $database_name = "";
                 $mysql_connection = mysqli_connect($mysql_server_name, $mysql_username, $mysql_password, $database_name);
                 $mysql_query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
                 $result = mysqli_query($mysql_connection, $mysql_query);
